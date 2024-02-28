@@ -30,8 +30,8 @@ An expression to look for an email and phone number looks like this:
 
 Anchors are used in a regular expression to specify a position where the character match occurs on a string.  The most common anchors are:
 
-"^" - the match will occur at the beginning of a string.
-"$" - the match will occur at the end of a string.
+* "^" - the match will occur at the beginning of a string.
+* "$" - the match will occur at the end of a string.
 
 
 You can see the hat and the dollar sign above at the beginning and ending of the expression.
@@ -40,11 +40,11 @@ You can see the hat and the dollar sign above at the beginning and ending of the
 
 Quantifiers are used in a regular expression to dictate how many occurances of a character there are.  Quantifiers include:
 
-"*" - matches zero or more times.
-"+" - matches one or more times.
-"?" - matches zero or one time.
-{n} - matches n times only.
-{n, m} - matches from n to m times.
+* "*" - matches zero or more times.
+* "+" - matches one or more times.
+* "?" - matches zero or one time.
+* {n} - matches n times only.
+* {n, m} - matches from n to m times.
 
 Above, we use the "+" and the {n} in our expression.  The "+" makes sure that we have at least one alphanumeric character or ".".  {3} and {4} are used to limit the digits to a xxx-xxx-xxxx format, like a phone number.
 
@@ -61,11 +61,11 @@ Above, we use the OR operator to add options for the end of an email.  The expre
 Character Classes are a set of specific characters that a match can only be. 
 These characters can be placed inside of [ ].  Examples:
 
-[-.]  - matches one of "-" or "."
-[a-z] - matches a lowercase letter from a to z.
-[az]  - matches only a lowercase a or z.  
-\w    - matches any word character.
-\d    - matches any digit character.
+* [-.]  - matches one of "-" or "."
+* [a-z] - matches a lowercase letter from a to z.
+* [az]  - matches only a lowercase a or z.  
+* \w    - matches any word character.
+* \d    - matches any digit character.
 
 Above, we use [\w\.]+.  This means that all alphanumeric characters and dots will be filtered.  gordon.jackman would be found using this regex
 
@@ -73,10 +73,10 @@ Above, we use [\w\.]+.  This means that all alphanumeric characters and dots wil
 
 Expression flags change how the expression is interpreted. Flags follow the closing forward slash of the expression. Here are some examples:
 
-"i" - is a flag that ignores case.
-"g" - is a global search that allows multiple searches starting at the end of the first match.  Without it, it will return the same match.
-"m" - is the multiline flag.  Using this, anchors will match on a line instead of the whole string.
-"s" - Dot (.) will match any character, including newline.
+* "i" - is a flag that ignores case.
+* "g" - is a global search that allows multiple searches starting at the end of the first match.  Without it, it will return the same match.
+* "m" - is the multiline flag.  Using this, anchors will match on a line instead of the whole string.
+* "s" - Dot (.) will match any character, including newline.
 
 
 ### Grouping and Capturing
@@ -103,11 +103,10 @@ When a group has been captured in (), you can use a back-reference to use the ma
 
 ### Look-ahead and Look-behind
 
-(?=ABC) - is a postive lookahead that matches a pattern after the main expression without including it in the result.
-(?!ABC) - is a negitive lookahead that specifies a pattern that can not match after the main expression.
-
-(?<=ABC>) - is a postive look-behind that matches a pattern before the main expression without including it in the result.
-(?<!ABC)  - is a negitive look-behind that specifies a pattern that can not match before the main expression.
+* (?=ABC) - is a postive lookahead that matches a pattern after the main expression without including it in the result.
+* (?!ABC) - is a negitive lookahead that specifies a pattern that can not match after the main expression.
+* (?<=ABC>) - is a postive look-behind that matches a pattern before the main expression without including it in the result.
+* (?<!ABC)  - is a negitive look-behind that specifies a pattern that can not match before the main expression.
 
 ## Author
 
