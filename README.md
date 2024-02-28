@@ -110,6 +110,6 @@ When a group has been captured in (), you can use a back-reference to use the ma
 
 ## Author
 
-Gordon Jackman
-UCF Coding Bootcamp Student
+Gordon Jackman  
+UCF Coding Bootcamp Student  
 [Github](https://github.com/spaghedward)
